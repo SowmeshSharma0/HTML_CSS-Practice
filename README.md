@@ -8,3 +8,10 @@
 
 6. Random Color gen using Events in JS
 7. Form manipulation using JS.
+8. Built simple counter/ ping pong game with these features:
+    * Dual counter for 2 players
+    * Whichever player wins, his score will be in green, the other in red.
+    * Live updates of score in game panel
+    * Once the match is over, the counter buttons for both players are disabled
+    * After game ends, the game can be reset (or can be done at any point)
+    * Default score is 5, selecting any other win score between game resets the game.
