@@ -14,24 +14,28 @@ form.addEventListener('submit', async function (e) {
 })
 
 const get_data = async function (query){
+    body_ele.removeChild(body_ele.lastChild)
     const new_url = `${base_url}?q=${query}`
     const data = await axios.get(new_url);
     return data;
 }
 
 const display_fetched_data = async function (all_shows){
+    const results_cont = document.createElement("div")
     all_shows.map(async function (curr_show){
         try{
             const show_name = curr_show.show.name;
             const show_img = await curr_show.show.image.medium;
 
             const new_container = createNewContainer(show_name, show_img)
-            body_ele.append(new_container)
+            results_cont.append(new_container)
+            // body_ele.append(new_container)
         }
         catch(e){
             console.log(e)
         }
     })
+    body_ele.append(results_cont)
 }
 
 //create a container (div) with image and title and display them
