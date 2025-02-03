@@ -14,6 +14,7 @@ button {
     padding: 1em 2em;
     font-size: 1.5em;
     transition: all 0.7s;
+    position:fixed
 } 
 
 button:hover{
@@ -23,3 +24,7 @@ button:hover{
     transform: translateY(-0.25em);
     cursor: pointer;
 }
+
+/* mostly rem used */
+/* em vs rem vs pixel vs % get the difference */
+/* try to drag the button : use js*/
